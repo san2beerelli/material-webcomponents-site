@@ -65,7 +65,7 @@ class App extends Component {
                         <mwc-container>
                         <Navbar ref="navbar" drawerItemClickHandler={this.drawerItemClickHandler}/>
                         <Header headerBtnClickHandler={this.headerBtnClickHandler}/>
-                                <div style={{ marginTop : '75px'}}>
+                                <div style={{ marginTop : '75px', width: '100%'}}>
                                     <Route exact path="/" component={Home}/>
                                     <Route path="/gettingstarted" component={GettingStarted}/>
                                     <Route path="/demos" component={Demos}/>

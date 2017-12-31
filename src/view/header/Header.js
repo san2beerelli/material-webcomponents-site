@@ -1,5 +1,19 @@
 import React, { Component } from 'react';
 import {withRouter} from "react-router-dom";
+import logoImg from '../../resources/logo.png'
+import style from 'styled-components'
+
+const GradientDiv = style.div`
+  background: -webkit-linear-gradient(0deg, #b7884c, #d8bb79, #fcf2a8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+`
+const LogoDiv = style.div`
+   display: flex;
+   flex-direction : row;
+   align-items : center;
+`
 
 class Header extends Component {
     constructor(props){
@@ -15,15 +29,9 @@ class Header extends Component {
     }
     componentWillMount(){
         const page = window.location.pathname.split('/')[1];
-        let pageName = "";
-        if(page.length === 0){
-            pageName = 'home'
-        }else{
-            pageName = page;
-        }
         let tabIndex;
         this.toolbarArr.map((item,indx) => {
-            if(item.evt === pageName){
+            if(item.evt === page){
                 tabIndex = indx;
             }
         })
@@ -37,7 +45,9 @@ class Header extends Component {
            btnStr = this.toolbarArr[evt.detail.activeTabIndex].evt
         }
         this.props.headerBtnClickHandler(btnStr)
-        this.props.history.push(`/${btnStr}`);
+        if(btnStr !== 'menu'){
+            this.props.history.push(`/${btnStr}`);
+        }
     }
     render() {
         const {activeindex} = this.state;
@@ -55,9 +65,14 @@ class Header extends Component {
                         <mwc-toolbar-icon onClick={()=>this.menuClickHandler('menu')}>
                                     menu
                         </mwc-toolbar-icon>
-                        <mwc-toolbar-title style={{cursor: 'pointer'}} onClick={()=>this.menuClickHandler('logo')} >
+                        <mwc-toolbar-title style={{cursor: 'pointer'}} onClick={()=>{window.location = "/"}} >
                             <mwc-typography type="title" display="inherit">
-                                material-webcomponents
+                                <LogoDiv>
+                                    <img src={logoImg} width="28px" height="28px" style={{marginRight: '10px'}}/>
+                                    <GradientDiv>
+                                        material-webcomponents
+                                    </GradientDiv>
+                                </LogoDiv>
                             </mwc-typography>
                         </mwc-toolbar-title>
                     </mwc-container>
