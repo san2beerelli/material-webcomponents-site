@@ -1,11 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import App from './view/app'
+import style from './styles/style'
+import ReactDependentScript from 'react-dependent-script'
 
-class HelloMessage extends React.Component {
-  render() {
-    return <div>Hello {this.props.name}</div>;
-  }
-}
-
+style()
 var mountNode = document.getElementById("app");
-ReactDOM.render(<HelloMessage name="material-webcomponents" />, mountNode);
+const AppContainer = () => <ReactDependentScript
+                            loadingComponent={<div>loading...</div>}
+                            scripts={['https://unpkg.com/material-webcomponents@1.0.0-beta.2/dist/material-webcomponents.js']}>
+    <App />
+  </ReactDependentScript>
+ReactDOM.render(<AppContainer />, mountNode);
