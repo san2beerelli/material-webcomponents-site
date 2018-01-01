@@ -27151,7 +27151,226 @@ Object.defineProperty(exports, "GettingStarted", {
 });
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./GettingStarted":61}],47:[function(require,module,exports) {
+},{"./GettingStarted":61}],217:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Button6 = exports.Button5 = exports.Button4 = exports.Button3 = exports.Button2 = exports.Button1 = undefined;
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Button1 = exports.Button1 = {
+  title: 'Flat Buttons',
+  component: [_react2.default.createElement(
+    "mwc-button",
+    { key: "flatbutton1" },
+    "Default"
+  ), _react2.default.createElement(
+    "mwc-button",
+    { key: "flatbutton2" },
+    "Primary"
+  ), _react2.default.createElement(
+    "mwc-button",
+    { color: "#b7884c", key: "flatbutton3" },
+    "Secondary"
+  ), _react2.default.createElement(
+    "mwc-button",
+    { disabled: true, key: "flatbutton4" },
+    "Disabled"
+  ), _react2.default.createElement(
+    "mwc-button",
+    { href: "https://material-webcomponents.com", key: "flatbutton5" },
+    "Link"
+  )]
+};
+var Button2 = exports.Button2 = {
+  title: 'Raised Buttons',
+  component: [_react2.default.createElement(
+    "mwc-button",
+    { raised: true, key: "flatbutton1" },
+    "Default"
+  ), _react2.default.createElement(
+    "mwc-button",
+    { raised: true, color: "#b7884c", key: "flatbutton2" },
+    "Primary"
+  ), _react2.default.createElement(
+    "mwc-button",
+    { raised: true, backgroundcolor: "#b7884c", color: "#263238", key: "flatbutton3" },
+    "Secondary"
+  ), _react2.default.createElement(
+    "mwc-button",
+    { raised: true, disabled: true, key: "flatbutton4" },
+    "Disabled"
+  )]
+};
+var Button3 = exports.Button3 = {
+  title: 'Buttons with icons and label',
+  component: [_react2.default.createElement(
+    "mwc-button",
+    { raised: true, key: "iconbutton1", icon: "delete", backgroundcolor: "#ce3d3d" },
+    "Delete"
+  ), _react2.default.createElement(
+    "mwc-button",
+    { raised: true, color: "#b7884c", key: "iconbutton2", icon: "send" },
+    "Send"
+  ), _react2.default.createElement(
+    "mwc-button",
+    { raised: true, backgroundcolor: "#b7884c", color: "#263238", key: "iconbutton3", icon: "save" },
+    "Save"
+  ), _react2.default.createElement(
+    "mwc-button",
+    { raised: true, disabled: true, key: "iconbutton4", icon: "bookmark" },
+    "Bookmark"
+  )]
+};
+var Button4 = exports.Button4 = {
+  title: 'Stroked Buttons',
+  component: [_react2.default.createElement(
+    "mwc-button",
+    { stroked: true, key: "strokebutton1" },
+    "Default"
+  ), _react2.default.createElement(
+    "mwc-button",
+    { stroked: true, color: "#263238", key: "strokebutton2" },
+    "Primary"
+  ), _react2.default.createElement(
+    "mwc-button",
+    { stroked: true, backgroundcolor: "#b7884c", color: "#263238", key: "strokebutton3" },
+    "Secondary"
+  ), _react2.default.createElement(
+    "mwc-button",
+    { stroked: true, disabled: true, key: "strokebutton4" },
+    "Disabled"
+  )]
+};
+var Button5 = exports.Button5 = {
+  title: 'Dense Buttons',
+  component: [_react2.default.createElement(
+    "mwc-button",
+    { raised: true, dense: true, key: "densebutton1" },
+    "Default"
+  ), _react2.default.createElement(
+    "mwc-button",
+    { raised: true, dense: true, color: "#b7884c", key: "densebutton2" },
+    "Primary"
+  ), _react2.default.createElement(
+    "mwc-button",
+    { raised: true, dense: true, backgroundcolor: "#b7884c", color: "#263238", key: "densebutton3" },
+    "Secondary"
+  ), _react2.default.createElement(
+    "mwc-button",
+    { raised: true, dense: true, disabled: true, key: "densebutton4" },
+    "Disabled"
+  )]
+};
+var Button6 = exports.Button6 = {
+  title: 'Compact Buttons',
+  component: [_react2.default.createElement(
+    "mwc-button",
+    { raised: true, compact: true, key: "compactbutton1" },
+    "Default"
+  ), _react2.default.createElement(
+    "mwc-button",
+    { raised: true, compact: true, color: "#b7884c", key: "compactbutton2" },
+    "Primary"
+  ), _react2.default.createElement(
+    "mwc-button",
+    { raised: true, compact: true, backgroundcolor: "#b7884c", color: "#263238", key: "compactbutton3" },
+    "Secondary"
+  ), _react2.default.createElement(
+    "mwc-button",
+    { raised: true, compact: true, disabled: true, key: "compactbutton4" },
+    "Disabled"
+  )]
+};
+},{"react":7}],216:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Button = undefined;
+
+var _Button = require("./Button");
+
+var Button = _interopRequireWildcard(_Button);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+exports.Button = Button;
+},{"./Button":217}],215:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _templateObject = _taggedTemplateLiteral(["\n  width : 50%;\n  height : 100%;\n  margin-top : 50px;\n  display: flex;\n  flex-direction : column;\n"], ["\n  width : 50%;\n  height : 100%;\n  margin-top : 50px;\n  display: flex;\n  flex-direction : column;\n"]),
+    _templateObject2 = _taggedTemplateLiteral(["\n  background-color : #BDBDBD;\n  width : 100%;\n  height : 100%;\n  border-radius : 4px;\n  padding: 20px;\n"], ["\n  background-color : #BDBDBD;\n  width : 100%;\n  height : 100%;\n  border-radius : 4px;\n  padding: 20px;\n"]);
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _styledComponents = require("styled-components");
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+var _components = require("./components");
+
+var DemoComponents = _interopRequireWildcard(_components);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var ContentWrapper = _styledComponents2.default.div(_templateObject);
+var PaperBg = _styledComponents2.default.div(_templateObject2);
+var renderEachComponent = function renderEachComponent(props) {
+  return _react2.default.createElement(
+    ContentWrapper,
+    { key: "" + new Date() + props.title },
+    _react2.default.createElement(
+      "mwc-typography",
+      { type: "title" },
+      props.title
+    ),
+    _react2.default.createElement(
+      PaperBg,
+      null,
+      _react2.default.createElement(
+        "mwc-container",
+        { width: "100%", justifycontent: "space-around", alignitems: "center" },
+        props.component
+      )
+    )
+  );
+};
+var renderContentWrapper = function renderContentWrapper(props) {
+  var demoComponent = props.demoComponent;
+  var Components = DemoComponents[demoComponent];
+  var compArr = [];
+  Object.keys(Components).forEach(function (val, indx) {
+    var comp = DemoComponents[demoComponent][val];
+    var eachComponent = renderEachComponent(comp);
+    compArr.push(eachComponent);
+  });
+  return compArr;
+};
+var Content = function Content(props) {
+  return renderContentWrapper(props);
+};
+
+exports.default = Content;
+},{"react":7,"styled-components":52,"./components":216}],47:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -27160,9 +27379,19 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _templateObject = _taggedTemplateLiteral(["\n   width : 100%;\n   display : flex;\n   flex-direction : column;\n   align-items : center;\n"], ["\n   width : 100%;\n   display : flex;\n   flex-direction : column;\n   align-items : center;\n"]);
+
 var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
+
+var _Content = require("./Content");
+
+var _Content2 = _interopRequireDefault(_Content);
+
+var _styledComponents = require("styled-components");
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27171,6 +27400,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var DemoWrapper = _styledComponents2.default.div(_templateObject);
 
 var Demos = function (_Component) {
   _inherits(Demos, _Component);
@@ -27185,9 +27418,18 @@ var Demos = function (_Component) {
     key: "render",
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        null,
-        "Demos"
+        "mwc-container",
+        { width: "100%", alignitems: "center", flexdirection: "column" },
+        _react2.default.createElement(
+          "div",
+          { style: { width: '50%', marginTop: '20px', marginBottom: '-20px' } },
+          _react2.default.createElement(
+            "mwc-typography",
+            { type: "display1" },
+            "Butons"
+          )
+        ),
+        _react2.default.createElement(_Content2.default, { demoComponent: "Button" })
       );
     }
   }]);
@@ -27196,7 +27438,7 @@ var Demos = function (_Component) {
 }(_react.Component);
 
 exports.default = Demos;
-},{"react":7}],22:[function(require,module,exports) {
+},{"react":7,"./Content":215,"styled-components":52}],22:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
