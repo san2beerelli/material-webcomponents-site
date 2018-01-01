@@ -1,14 +1,14 @@
 const Checkbox = {
         component : `  () => (
         <div>
-                <webmd-checkbox>
-                </webmd-checkbox>
-                <webmd-checkbox
+                <mwc-checkbox>
+                </mwc-checkbox>
+                <mwc-checkbox
                     checkcolor="000000"
                     label="Checkbox Label"
                     alignlabel="right"
                     checked="true">
-                </webmd-checkbox>
+                </mwc-checkbox>
         </div>
   )
                         `,

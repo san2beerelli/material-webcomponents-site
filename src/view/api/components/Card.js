@@ -1,23 +1,23 @@
 const Card = {
     component : `
      () => (
-    <webmd-card width="400px">
-        <webmd-card-header title="Title" subtitle="Sub Title">
-        </webmd-card-header>
-        <webmd-card-content>
+    <mwc-card width="400px">
+        <mwc-card-header title="Title" subtitle="Sub Title">
+        </mwc-card-header>
+        <mwc-card-content>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
         when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        </webmd-card-content>
-        <webmd-card-actions>
-        <webmd-button>
+        </mwc-card-content>
+        <mwc-card-actions>
+        <mwc-button>
             Action
-        </webmd-button>
-        <webmd-button>
+        </mwc-button>
+        <mwc-button>
             Action 1
-        </webmd-button>
-        </webmd-card-actions>
-    </webmd-card>
+        </mwc-button>
+        </mwc-card-actions>
+    </mwc-card>
     )
     `,
      markdown : `## Props
@@ -33,10 +33,10 @@ const Card = {
 ## Slots
 | Slot | Prop dependencies | Component | Description |
 | ---- | ----------------- | ----------- | ----------- |
-| webmd-card-actions | -              | Card Actions| Card Actions |
-| webmd-card-content | -              | Card Content| Renders any kind of content to the card |
-| webmd-card-header | -              | Card Header| Header component with title and subtitle. It will accepts all types of HTML Elements |
-| webmd-card-media | -              | Card Media| Renders images on to the card |
+| mwc-card-actions | -              | Card Actions| Card Actions |
+| mwc-card-content | -              | Card Content| Renders any kind of content to the card |
+| mwc-card-header | -              | Card Header| Header component with title and subtitle. It will accepts all types of HTML Elements |
+| mwc-card-media | -              | Card Media| Renders images on to the card |
 `
 }
 

@@ -44,10 +44,10 @@ class Header extends Component {
         }else{
            btnStr = this.toolbarArr[evt.detail.activeTabIndex].evt
         }
-        this.props.headerBtnClickHandler(btnStr)
         if(btnStr !== 'menu'){
             this.props.history.push(`/${btnStr}`);
         }
+         this.props.headerBtnClickHandler(btnStr)
     }
     render() {
         const {activeindex} = this.state;

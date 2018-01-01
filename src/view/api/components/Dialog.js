@@ -6,23 +6,23 @@ const Dialog = {
         }
         renderDialog(){
             return(
-             <webmd-dialog width="450px"
+             <mwc-dialog width="450px"
              ref={(dialog) => { this.dialogBox = dialog; }}>
-                <webmd-dialog-header>
+                <mwc-dialog-header>
                 Dialog Title
-                </webmd-dialog-header>
-                <webmd-dialog-body>
+                </mwc-dialog-header>
+                <mwc-dialog-body>
                 Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.
-                </webmd-dialog-body>
-                <webmd-dialog-footer>
-                <webmd-button type="accept">
+                </mwc-dialog-body>
+                <mwc-dialog-footer>
+                <mwc-button type="accept">
                     Accept
-                </webmd-button>
-                <webmd-button type="cancel">
+                </mwc-button>
+                <mwc-button type="cancel">
                     Cancel
-                </webmd-button>
-                </webmd-dialog-footer>
-            </webmd-dialog>
+                </mwc-button>
+                </mwc-dialog-footer>
+            </mwc-dialog>
          )
         }
         onButtonClick(){
@@ -31,13 +31,13 @@ const Dialog = {
         render() {
             return (
              <div>
-                <webmd-button raised
+                <mwc-button raised
                     color="#ffffff"
                     backgroundcolor="#323232"
                     icon="bookmark"
                     onClick={this.onButtonClick} >
                     Open Dialog
-                </webmd-button>
+                </mwc-button>
                 {this.renderDialog()}
              </div>
             )
@@ -70,9 +70,9 @@ const Dialog = {
 ## Slots
 | Slot | Prop dependencies | Component | Description |
 | ---- | ----------------- | ----------- | ----------- |
-| webmd-dialog-body | -              | Dialog Body| Renders any kind of content to the body |
-| webmd-dialog-footer | -              | Dialog Footer| Expects webmd-buttons for actions |
-| webmd-dialog-header | -              | Dialog Header| Dialog Header component with title. |
+| mwc-dialog-body | -              | Dialog Body| Renders any kind of content to the body |
+| mwc-dialog-footer | -              | Dialog Footer| Expects mwc-buttons for actions |
+| mwc-dialog-header | -              | Dialog Header| Dialog Header component with title. |
 `
 }
 
