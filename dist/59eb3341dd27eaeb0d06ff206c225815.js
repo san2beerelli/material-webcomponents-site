@@ -27214,7 +27214,52 @@ Object.defineProperty(exports, "GettingStarted", {
 });
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./GettingStarted":12}],42:[function(require,module,exports) {
+},{"./GettingStarted":12}],17:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Demos = function (_Component) {
+  _inherits(Demos, _Component);
+
+  function Demos() {
+    _classCallCheck(this, Demos);
+
+    return _possibleConstructorReturn(this, (Demos.__proto__ || Object.getPrototypeOf(Demos)).apply(this, arguments));
+  }
+
+  _createClass(Demos, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        null,
+        "Demos"
+      );
+    }
+  }]);
+
+  return Demos;
+}(_react.Component);
+
+exports.default = Demos;
+},{"react":20}],42:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -27352,22 +27397,217 @@ var Button6 = exports.Button6 = {
     "Disabled"
   )]
 };
+},{"react":20}],327:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Card2 = exports.Card1 = undefined;
+
+var _templateObject = _taggedTemplateLiteral(["\n    background-color : white;\n"], ["\n    background-color : white;\n"]);
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _styledComponents = require("styled-components");
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var CardBg = _styledComponents2.default.div(_templateObject);
+
+var Card1 = exports.Card1 = {
+  title: 'Simple Card',
+  component: [_react2.default.createElement(
+    CardBg,
+    { key: "SimpleCard1" },
+    _react2.default.createElement(
+      "mwc-card",
+      { width: "400px" },
+      _react2.default.createElement("mwc-card-header", { title: "Title", subtitle: "Sub Title" }),
+      _react2.default.createElement(
+        "mwc-card-content",
+        null,
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      ),
+      _react2.default.createElement(
+        "mwc-card-actions",
+        null,
+        _react2.default.createElement(
+          "mwc-button",
+          null,
+          "Learn more"
+        )
+      )
+    )
+  )]
+};
+var Card2 = exports.Card2 = {
+  title: 'Media Card',
+  component: [_react2.default.createElement(
+    CardBg,
+    { key: "MediaCard1" },
+    _react2.default.createElement(
+      "mwc-card",
+      { width: "400px" },
+      _react2.default.createElement("mwc-card-media", { src: "https://picsum.photos/400", mediaheight: "3x" }),
+      _react2.default.createElement("mwc-card-header", { title: "Media" }),
+      _react2.default.createElement(
+        "mwc-card-content",
+        null,
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      ),
+      _react2.default.createElement(
+        "mwc-card-actions",
+        null,
+        _react2.default.createElement(
+          "mwc-button",
+          null,
+          "Share"
+        ),
+        _react2.default.createElement(
+          "mwc-button",
+          null,
+          "Learn more"
+        )
+      )
+    )
+  )]
+};
+},{"react":20,"styled-components":38}],328:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Checkbox2 = exports.Checkbox1 = undefined;
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Checkbox1 = exports.Checkbox1 = {
+  title: 'Checkbox',
+  component: [_react2.default.createElement("mwc-checkbox", { key: "Checkbox1" }), _react2.default.createElement("mwc-checkbox", { key: "Checkbox2",
+    checkcolor: "b7884c",
+    checked: true }), _react2.default.createElement("mwc-checkbox", { key: "Checkbox3", checked: true, disabled: true }), _react2.default.createElement("mwc-checkbox", { key: "Checkbox4", indeterminate: true })]
+};
+var Checkbox2 = exports.Checkbox2 = {
+  title: 'Checkbox With Label',
+  component: [_react2.default.createElement("mwc-checkbox", { key: "checkboxwithlabel1", label: "Primary" }), _react2.default.createElement("mwc-checkbox", { key: "checkboxwithlabel2",
+    checkcolor: "b7884c", label: "Secondary",
+    checked: true }), _react2.default.createElement("mwc-checkbox", { key: "checkboxwithlabel3",
+    checked: true, disabled: true, alignlabel: "right",
+    label: "Disabled"
+  }), _react2.default.createElement("mwc-checkbox", { key: "checkboxwithlabel4",
+    alignlabel: "right",
+    indeterminate: true,
+    label: "Indeterminate"
+  })]
+};
+},{"react":20}],329:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Dialog1 = undefined;
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var dialogBox = void 0;
+
+function renderDialog() {
+  return _react2.default.createElement(
+    "mwc-dialog",
+    { width: "450px",
+      ref: function ref(dialog) {
+        dialogBox = dialog;
+      } },
+    _react2.default.createElement(
+      "mwc-dialog-header",
+      null,
+      "Dialog Title"
+    ),
+    _react2.default.createElement(
+      "mwc-dialog-body",
+      null,
+      "Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running."
+    ),
+    _react2.default.createElement(
+      "mwc-dialog-footer",
+      null,
+      _react2.default.createElement(
+        "mwc-button",
+        { type: "accept" },
+        "Accept"
+      ),
+      _react2.default.createElement(
+        "mwc-button",
+        { type: "cancel" },
+        "Cancel"
+      )
+    )
+  );
+}
+
+var Dialog1 = exports.Dialog1 = {
+  title: 'Simple Dialog',
+  component: [_react2.default.createElement(
+    "div",
+    { key: "simpledialog" },
+    _react2.default.createElement(
+      "mwc-button",
+      { raised: true, onClick: function onClick() {
+          dialogBox.show();
+        } },
+      "Open Dialog"
+    ),
+    renderDialog()
+  )]
+};
 },{"react":20}],32:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Button = undefined;
+exports.Dialog = exports.Checkbox = exports.Card = exports.Button = undefined;
 
 var _Button = require("./Button");
 
 var Button = _interopRequireWildcard(_Button);
 
+var _Card = require("./Card");
+
+var Card = _interopRequireWildcard(_Card);
+
+var _Checkbox = require("./Checkbox");
+
+var Checkbox = _interopRequireWildcard(_Checkbox);
+
+var _Dialog = require("./Dialog");
+
+var Dialog = _interopRequireWildcard(_Dialog);
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 exports.Button = Button;
-},{"./Button":42}],24:[function(require,module,exports) {
+exports.Card = Card;
+exports.Checkbox = Checkbox;
+exports.Dialog = Dialog;
+},{"./Button":42,"./Card":327,"./Checkbox":328,"./Dialog":329}],24:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -27420,20 +27660,23 @@ var renderEachComponent = function renderEachComponent(props) {
 var renderContentWrapper = function renderContentWrapper(props) {
   var demoComponent = props.demoComponent;
   var Components = DemoComponents[demoComponent];
-  var compArr = [];
-  Object.keys(Components).forEach(function (val, indx) {
-    var comp = DemoComponents[demoComponent][val];
-    var eachComponent = renderEachComponent(comp);
-    compArr.push(eachComponent);
-  });
-  return compArr;
+  if (Components) {
+    var compArr = [];
+    Object.keys(Components).forEach(function (val, indx) {
+      var comp = DemoComponents[demoComponent][val];
+      var eachComponent = renderEachComponent(comp);
+      compArr.push(eachComponent);
+    });
+    return compArr;
+  }
+  return demoComponent;
 };
 var Content = function Content(props) {
   return renderContentWrapper(props);
 };
 
 exports.default = Content;
-},{"react":20,"styled-components":38,"./components":32}],17:[function(require,module,exports) {
+},{"react":20,"styled-components":38,"./components":32}],326:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -27441,8 +27684,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _templateObject = _taggedTemplateLiteral(["\n   width : 100%;\n   display : flex;\n   flex-direction : column;\n   align-items : center;\n"], ["\n   width : 100%;\n   display : flex;\n   flex-direction : column;\n   align-items : center;\n"]);
 
 var _react = require("react");
 
@@ -27452,10 +27693,6 @@ var _Content = require("./Content");
 
 var _Content2 = _interopRequireDefault(_Content);
 
-var _styledComponents = require("styled-components");
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27464,22 +27701,30 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+/* import * as EditorComponents from './components' */
 
-var DemoWrapper = _styledComponents2.default.div(_templateObject);
+var DemosPreview = function (_Component) {
+  _inherits(DemosPreview, _Component);
 
-var Demos = function (_Component) {
-  _inherits(Demos, _Component);
+  function DemosPreview(props) {
+    _classCallCheck(this, DemosPreview);
 
-  function Demos() {
-    _classCallCheck(this, Demos);
+    var _this = _possibleConstructorReturn(this, (DemosPreview.__proto__ || Object.getPrototypeOf(DemosPreview)).call(this, props));
 
-    return _possibleConstructorReturn(this, (Demos.__proto__ || Object.getPrototypeOf(Demos)).apply(this, arguments));
+    _this.getComponentName = _this.getComponentName.bind(_this);
+    return _this;
   }
 
-  _createClass(Demos, [{
+  _createClass(DemosPreview, [{
+    key: "getComponentName",
+    value: function getComponentName() {
+      var compNameFromUrl = this.props.match.url.split('/')[2];
+      return compNameFromUrl.charAt(0).toUpperCase() + compNameFromUrl.slice(1);
+    }
+  }, {
     key: "render",
     value: function render() {
+      var compName = this.getComponentName();
       return _react2.default.createElement(
         "mwc-container",
         { width: "100%", alignitems: "center", flexdirection: "column" },
@@ -27489,19 +27734,19 @@ var Demos = function (_Component) {
           _react2.default.createElement(
             "mwc-typography",
             { type: "display1" },
-            "Butons"
+            compName
           )
         ),
-        _react2.default.createElement(_Content2.default, { demoComponent: "Button" })
+        _react2.default.createElement(_Content2.default, { demoComponent: compName })
       );
     }
   }]);
 
-  return Demos;
+  return DemosPreview;
 }(_react.Component);
 
-exports.default = Demos;
-},{"react":20,"./Content":24,"styled-components":38}],10:[function(require,module,exports) {
+exports.default = DemosPreview;
+},{"react":20,"./Content":24}],10:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -27517,8 +27762,17 @@ Object.defineProperty(exports, "Demos", {
   }
 });
 
+var _DemosPreview = require("./DemosPreview");
+
+Object.defineProperty(exports, "DemosPreview", {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_DemosPreview).default;
+  }
+});
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Demos":17}],18:[function(require,module,exports) {
+},{"./Demos":17,"./DemosPreview":326}],18:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -58417,7 +58671,8 @@ var App = function (_Component) {
               { style: { marginTop: '75px', width: '100%' } },
               _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/", component: _home.Home }),
               _react2.default.createElement(_reactRouterDom.Route, { path: "/gettingstarted", component: _gettingstarted.GettingStarted }),
-              _react2.default.createElement(_reactRouterDom.Route, { path: "/demos", component: _demos.Demos }),
+              _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/demos", component: _demos.Demos }),
+              _react2.default.createElement(_reactRouterDom.Route, { path: "/demos/:component", component: _demos.DemosPreview }),
               _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/api", component: _api.Api }),
               _react2.default.createElement(_reactRouterDom.Route, { path: "/api/:component", component: _api.ApiPlayground })
             )

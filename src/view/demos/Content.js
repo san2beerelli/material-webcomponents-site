@@ -35,13 +35,16 @@ const renderEachComponent = (props) => {
 const renderContentWrapper = (props) => {
     const demoComponent = props.demoComponent;
     const Components = DemoComponents[demoComponent]
-    let compArr = [];
-    Object.keys(Components).forEach((val,indx) => {
-        const comp = DemoComponents[demoComponent][val]
-        const eachComponent = renderEachComponent(comp)
-        compArr.push(eachComponent)
-    })
-   return compArr
+    if(Components){
+        let compArr = [];
+        Object.keys(Components).forEach((val,indx) => {
+            const comp = DemoComponents[demoComponent][val]
+            const eachComponent = renderEachComponent(comp)
+            compArr.push(eachComponent)
+        })
+    return compArr
+    }
+    return demoComponent
 
 }
 const Content = (props) => {

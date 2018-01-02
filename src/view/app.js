@@ -4,7 +4,7 @@ import {Navbar} from './navbar'
 import {AppRouter} from './router'
 import {Home} from './home'
 import {GettingStarted} from './gettingstarted'
-import {Demos} from './demos'
+import {Demos, DemosPreview} from './demos'
 import {Api, ApiPlayground} from './api'
 import {
   BrowserRouter as Router,
@@ -73,10 +73,11 @@ class App extends Component {
                         <Header headerBtnClickHandler={this.headerBtnClickHandler}/>
                                 <div style={{ marginTop : '75px', width: '100%'}}>
                                     <Route exact path="/" component={Home}/>
-                                    <Route path="/gettingstarted" component={GettingStarted}/>
-                                    <Route path="/demos" component={Demos}/>
+                                    <Route path="/gettingstarted" component={GettingStarted} />
+                                    <Route exact path="/demos" component={Demos}/>
+                                    <Route path="/demos/:component" component={DemosPreview} />
                                     <Route exact path="/api" component={Api}/>
-                                    <Route path="/api/:component" component={ApiPlayground}/>
+                                    <Route path="/api/:component" component={ApiPlayground} />
                                 </div>
                         </mwc-container>
                     </Router>
