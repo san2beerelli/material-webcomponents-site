@@ -26857,7 +26857,8 @@ var navigation = exports.navigation = {
       title: "Dialog",
       component: 'Dialog'
     }, {
-      title: "Drawer"
+      title: "Drawer",
+      component: 'Drawer'
     }, {
       title: "Elevation"
     }, {
@@ -58322,6 +58323,18 @@ var Dialog = {
 };
 
 exports.default = Dialog;
+},{}],219:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Drawer = {
+  component: "class Drawer extends React.Component {\n        constructor() {\n            super()\n            this.onButtonClick = this.onButtonClick.bind(this);\n            this.onNavigationClick = this.onNavigationClick.bind(this)\n        }\n        renderDrawer(){\n            const buttons = ['button1','button2','button3']\n            return(\n               <mwc-drawer type=\"temporary\" header={true} ref={(mwcDrawer) => { this.mwcDrawer = mwcDrawer; }}>\n               <mwc-container slot=\"header\" justifycontent=\"center\" alignitems=\"center\"\n               width=\"100%\"\n               height=\"100%\"\n               backgroundcolor=\"#323232\">\n                <mwc-typography type=\"title\" color=\"#ffffff\">\n                    Header\n                </mwc-typography>\n               </mwc-container>\n               <mwc-list>\n               {\n                   buttons.map((button,i) => {\n                       return(\n                        <mwc-list-item key={i} onClick={()=> this.onNavigationClick()}>\n                        {button}\n                        </mwc-list-item>\n                       )\n                   })\n               }\n               </mwc-list>\n             </mwc-drawer>\n         )\n        }\n        onNavigationClick(){\n            this.mwcDrawer.close()\n        }\n        onButtonClick(){\n            this.mwcDrawer.open();\n        }\n        render() {\n            return (\n             <div>\n                <mwc-button raised\n                    color=\"#ffffff\"\n                    backgroundcolor=\"#323232\"\n                    icon=\"menu\"\n                    onClick={this.onButtonClick} >\n                    Open Drawer\n                </mwc-button>\n                {this.renderDrawer()}\n             </div>\n            )\n        }\n        }\n    ",
+  markdown: "## Props\n| Prop | Type | Default | Required | Component | Description |\n| ------ | ----------- | ------ | ------ | ------ | ------ |\n| type | String | persistent | false | Drawer | Drawer types are persistent,permanent,temporary  |\n| toolbarspacer | Boolean | true | false | Drawer | Displays the tool bar spacer  |\n| header | Boolean | true | false | Drawer | Displays the tool bar header |\n\n## Events\n| Event | Description |\n| ------ | ------ |\n| ondraweropen  | will be dispatched when the Drawer is opened|\n| ondrawerclose  | will be dispatched when the Drawer is closed |\n\n## Methods\n| Event | Description |\n| ------ | ------ |\n| open  | opens the Drawer |\n| close  | close the Drawer |\n\n## Slots\n| Slot Name | Prop dependencies | Component | Description |\n| ---- | ----------------- | ----------- | ----------- |\n| header | -              | - | Renders any kind of content to the header. Component should have slot=\"header\" |\n| toolbarspacer | -              | - | Renders any kind of content to the toolbar spacer. Component should have slot=\"toolbarspacer\" |\n"
+};
+
+exports.default = Drawer;
 },{}],32:[function(require,module,exports) {
 "use strict";
 
@@ -58365,8 +58378,17 @@ Object.defineProperty(exports, "Dialog", {
   }
 });
 
+var _Drawer = require("./Drawer");
+
+Object.defineProperty(exports, "Drawer", {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Drawer).default;
+  }
+});
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Button":35,"./Card":37,"./Checkbox":36,"./Dialog":38}],20:[function(require,module,exports) {
+},{"./Button":35,"./Card":37,"./Checkbox":36,"./Dialog":38,"./Drawer":219}],20:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

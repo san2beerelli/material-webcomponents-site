@@ -4,8 +4,7 @@
   },
   "hosting": {
     "rewrites": [
-      { "source": "/api/**", "destination": "/index.html" },
-      { "source": "/demos/**", "destination": "/index.html" }
+      { "source": "**", "destination": "/index.html" }
     ]
   }
 }

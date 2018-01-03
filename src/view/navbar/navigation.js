@@ -20,7 +20,8 @@ export const navigation = {
                 component: 'Dialog'
             },
             {
-                title:"Drawer"
+                title:"Drawer",
+                component: 'Drawer'
             },
             {
                 title:"Elevation"
