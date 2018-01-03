@@ -26860,9 +26860,8 @@ var navigation = exports.navigation = {
       title: "Drawer",
       component: 'Drawer'
     }, {
-      title: "Elevation"
-    }, {
-      title: "FAB"
+      title: "FAB",
+      component: "Fab"
     }, {
       title: "Grid List"
     }, {
@@ -26877,6 +26876,8 @@ var navigation = exports.navigation = {
       title: "Radio"
     }, {
       title: "Ripple"
+    }, {
+      title: "Paper"
     }, {
       title: "Popover"
     }, {
@@ -58335,6 +58336,18 @@ var Drawer = {
 };
 
 exports.default = Drawer;
+},{}],220:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Fab = {
+  component: "() => (\n        [\n            <mwc-fab icon=\"edit\" key=\"fab1\">\n            </mwc-fab>,\n            <mwc-fab icon=\"edit\" backgroundcolor=\"#b7884c\" color=\"#263238\" key=\"fab2\">\n            </mwc-fab>,\n            <mwc-fab icon=\"edit\" mini={true}\n            backgroundcolor=\"#ff0000\"\n            color=\"#263238\" key=\"fab3\">\n            </mwc-fab>\n        ]\n        )\n\n    ",
+  markdown: "## Props\n| Prop | Type | Default | Required | Component | Description |\n| ------ | ----------- | ------ | ------ | ------ | ------ |\n| icon | String | - | false | Fab | Icon on Fab. Supports Material icons  |\n| mini | Boolean | false | false | Fab | Mini icon fab   |\n| backgroundcolor | String | - | false | Fab | Fab background color |\n| color | String | - | false | Fab | Fab icon color |\n| ripple | Boolean | - | false | Fab | Fab with ripple effect |\n"
+};
+
+exports.default = Fab;
 },{}],32:[function(require,module,exports) {
 "use strict";
 
@@ -58387,8 +58400,17 @@ Object.defineProperty(exports, "Drawer", {
   }
 });
 
+var _Fab = require("./Fab");
+
+Object.defineProperty(exports, "Fab", {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Fab).default;
+  }
+});
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Button":35,"./Card":37,"./Checkbox":36,"./Dialog":38,"./Drawer":219}],20:[function(require,module,exports) {
+},{"./Button":35,"./Card":37,"./Checkbox":36,"./Dialog":38,"./Drawer":219,"./Fab":220}],20:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

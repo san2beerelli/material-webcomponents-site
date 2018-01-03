@@ -24,10 +24,8 @@ export const navigation = {
                 component: 'Drawer'
             },
             {
-                title:"Elevation"
-            },
-            {
-                title:"FAB"
+                title:"FAB",
+                component:"Fab",
             },
             {
                 title:"Grid List"
@@ -49,6 +47,9 @@ export const navigation = {
             },
              {
                 title:"Ripple"
+            },
+            {
+                title:"Paper"
             },
             {
                 title: "Popover"
