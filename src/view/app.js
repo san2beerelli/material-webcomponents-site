@@ -75,9 +75,9 @@ class App extends Component {
                                     <Route exact path="/" component={Home}/>
                                     <Route path="/gettingstarted" component={GettingStarted} />
                                     <Route exact path="/demos" component={Demos}/>
-                                    <Route path="/demos/:component" component={DemosPreview} />
+                                    {/* <Route path="/demos/:component" component={DemosPreview} /> */}
                                     <Route exact path="/api" component={Api}/>
-                                    <Route path="/api/:component" component={ApiPlayground} />
+                                    {/* <Route path="/api/:component" component={ApiPlayground} /> */}
                                 </div>
                         </mwc-container>
                     </Router>

@@ -24,9 +24,9 @@ class Navbar extends Component {
         this.props.drawerItemClickHandler(evt)
          const moduleName = window.location.pathname.split('/')[1];
         if(moduleName.length ===0 || moduleName === 'gettingstarted'){
-            window.location = `/demos/${evt.component}`;
+            window.location = `/demos?type=${evt.component}`;
         }else{
-            this.props.history.push(`/${moduleName}/${evt.component}`);
+            this.props.history.push(`/${moduleName}?type=${evt.component}`);
         }
         if(this.props.navBarType == "temporary"){
             this.close();

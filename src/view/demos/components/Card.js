@@ -31,7 +31,7 @@ export const Card2 = {
     component : [
         <CardBg key="MediaCard1">
             <mwc-card width="400px">
-                <mwc-card-media src="https://picsum.photos/400" mediaheight="3x"></mwc-card-media>
+                <mwc-card-media src="https://placeimg.com/400/400/any" mediaheight="3x"></mwc-card-media>
                  <mwc-card-header title="Media">
                 </mwc-card-header>
                  <mwc-card-content>

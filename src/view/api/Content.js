@@ -10,6 +10,7 @@ const ContentWrapper = styled.div`
 `
 
 const Content = (props) => {
+    console.log(props)
     if(props.componentObj){
      return(
         <ContentWrapper>
@@ -18,7 +19,6 @@ const Content = (props) => {
         </ContentWrapper>
      )
     }
-    return 'Api';
 }
 
 export default Content;
