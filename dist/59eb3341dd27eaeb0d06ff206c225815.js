@@ -26863,27 +26863,35 @@ var navigation = exports.navigation = {
       title: "FAB",
       component: "Fab"
     }, {
-      title: "Grid List"
+      title: "Grid List",
+      component: "Gridlist"
     }, {
-      title: "Icon toggle"
+      title: "Icon toggle",
+      component: "Icontoggle"
     }, {
-      title: "Layout Grid"
+      title: "List",
+      component: "List"
     }, {
-      title: "Progress"
+      title: "Menu",
+      component: "Menu"
     }, {
-      title: "List"
+      title: "Paper",
+      component: "Paper"
     }, {
-      title: "Radio"
+      title: "Progress",
+      component: "Progress"
     }, {
-      title: "Ripple"
+      title: "Radio",
+      component: "Radio"
     }, {
-      title: "Paper"
+      title: "Select List",
+      component: "Selectlist"
     }, {
-      title: "Popover"
+      title: "Slider",
+      component: "Slider"
     }, {
-      title: "Slider"
-    }, {
-      title: "Snackbar"
+      title: "Snackbar",
+      component: "Snackbar"
     }, {
       title: "Switch"
     }, {
@@ -58348,6 +58356,126 @@ var Fab = {
 };
 
 exports.default = Fab;
+},{}],222:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Gridlist = {
+  component: "() => (\n        <mwc-grid-list tilewidth=\"200px\">\n            <mwc-grid-list-tile>\n                 <img slot=\"tile-content\" width=\"200px\" height=\"200px\" src=\"https://placeimg.com/200/200/any\" />\n                 <div slot=\"tile-title\"> Image 1 </div>\n            </mwc-grid-list-tile>\n            <mwc-grid-list-tile>\n                 <img slot=\"tile-content\" width=\"200px\" height=\"200px\" src=\"https://placeimg.com/200/200/any\" />\n                 <div slot=\"tile-title\"> Image 2 </div>\n            </mwc-grid-list-tile>\n        </mwc-grid-list>\n        )\n\n    ",
+  markdown: "## Props\n| Prop | Type | Default | Required | Component | Description |\n| ------ | ----------- | ------ | ------ | ------ | ------ |\n| icon | String | - | false | Fab | Icon on Fab. Supports Material icons  |\n| mini | Boolean | false | false | Fab | Mini icon fab   |\n| backgroundcolor | String | - | false | Fab | Fab background color |\n| color | String | - | false | Fab | Fab icon color |\n| ripple | Boolean | - | false | Fab | Fab with ripple effect |\n"
+};
+
+exports.default = Gridlist;
+},{}],223:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Icontoggle = {
+  component: "  () => ([<mwc-icon-toggle key=\"toggle1\"\n                      onicon=\"favorite\"\n                      officon=\"favorite_border\">\n                 </mwc-icon-toggle>,\n                 <mwc-icon-toggle key=\"toggle2\"\n                      toggleon={true}\n                      onicon=\"favorite\"\n                      officon=\"favorite_border\"\n                      color=\"#b7884c\"\n                      >\n                 </mwc-icon-toggle>\n                ]\n  )\n                        ",
+  markdown: "## Props\n| Prop | Type | Default | Required | Description |\n| ------ | ----------- | ------ | ------ | ------ |\n| onicon | String | - | true | Material on icon |\n| officon | String | - | true | Material off icon |\n| color | String | - | false | Icon Color |\n| disabled | Boolean | false | false | Disable the Toggle icon |\n| toggleon | Boolean | false | false | Default Toggle State |\n| label | String | - | false | Label for the Checkbox |\n| ripple | Boolean | true | false | Ripple effect for Checkbox |\n\n\n## Events\n| Slot | Prop dependencies | Description |\n| ---- | ----------------- | ----------- |\n| oniconchange | -              | Fires the event when icon toggle |\n"
+};
+
+exports.default = Icontoggle;
+},{}],224:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var List = {
+  component: "  () => ([\n                <mwc-list key=\"list1\">\n                <mwc-list-item>\n                Item 1\n                </mwc-list-item>\n                <mwc-list-item>\n                Item 2\n                </mwc-list-item>\n                <mwc-list-item>\n                Item 3\n                </mwc-list-item>\n                 </mwc-list>\n                ]\n  )\n                        ",
+  markdown: "## Props\n| Prop | Type | Default | Required | Component |Description |\n| ------ | ----------- | ------ | ------ | ------ | ------ |\n| borderlist | Boolean | true | false | List |Includes the border to the list and items |\n| dense | Boolean | - | false | List |Dense list |\n| ripple | Boolean | - | false | ListItem | Ripple effect on List item |\n| interactive | Boolean | - | false | ListItem | Interactive List item |\n\n\n## Slots\n| Slot | Prop dependencies | Component | Description |\n| ---- | ----------------- | ----------- | ----------- |\n| mwc-list-item | -              | ListItem | List Item |\n"
+};
+
+exports.default = List;
+},{}],225:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Menu = {
+  component: "\n         class Menu extends React.Component {\n        constructor() {\n            super()\n            this.onButtonClick = this.onButtonClick.bind(this);\n        }\n        renderMenu(){\n            const buttons = ['Menu1','Menu2','Menu3']\n            return(\n               <mwc-menu ref={(mwcMenu) => { this.mwcMenu = mwcMenu; }}>\n                {\n                   buttons.map((button,i) => {\n                       return(\n                        <mwc-menu-item key={i}>\n                        {button}\n                        </mwc-menu-item>\n                       )\n                   })\n               }\n               </mwc-menu>\n               )\n        }\n        onButtonClick(){\n            this.mwcMenu.show();\n        }\n        render() {\n            return (\n             <div>\n                <mwc-button raised\n                    color=\"#ffffff\"\n                    backgroundcolor=\"#323232\"\n                    icon=\"menu\"\n                    onClick={this.onButtonClick} >\n                </mwc-button>\n                {this.renderMenu()}\n             </div>\n            )\n        }\n        }\n    ",
+  markdown: "## Props\n| Prop | Type | Default | Required | Component | Description |\n| ------ | ----------- | ------ | ------ | ------ | ------ |\n| open | Boolean | false | false |  | open the Menu|\n| disabled | Boolean | false | false | Menu Item | Disables the Menu Item|\n\n## Events\n| Event | Description |\n| ------ | ------ |\n| selected  | will be dispatched when the Menu item is selected|\n\n## Methods\n| Event | Description |\n| ------ | ------ |\n| show  | shows the Menu |\n| hide  | hides the Menu |\n\n## Slots\n| Slot | Prop dependencies | Component | Description |\n| ---- | ----------------- | ----------- | ----------- |\n| mwc-menu-item | -              | Menu Item| Menu Item |\n\n"
+};
+
+exports.default = Menu;
+},{}],226:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Paper = {
+  component: "() => (\n          <mwc-container flexwrap=\"wrap\">\n            <mwc-paper width=\"150px\" height=\"100px\">\n            </mwc-paper>\n            <mwc-paper elevation={3} radius={4} width=\"150px\" height=\"100px\">\n            </mwc-paper>\n            <mwc-paper elevation={6} radius={20} width=\"150px\" height=\"100px\">\n            </mwc-paper>\n            <mwc-paper elevation={10} radius={40} width=\"150px\" height=\"100px\">\n            </mwc-paper>\n            <mwc-paper radius={75} width=\"150px\" height=\"100px\">\n            </mwc-paper>\n            <mwc-paper radius={120} width=\"150px\" height=\"100px\">\n            </mwc-paper>\n          </mwc-container>\n        )\n\n    ",
+  markdown: "## Props\n| Prop | Type | Default | Required  | Description |\n| ------ | ----------- | ------ | ------ | ------ |\n| width | String | - | false |  Paper Width  |\n| height | String | - | false |  Paper Height  |\n| elevation | Number | 2 | false |  Paper elevation |\n| radius | Number | 2 | false |  Paper Radius |\n"
+};
+
+exports.default = Paper;
+},{}],227:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Progress = {
+  component: "() => (\n         <div style={{\n             display: 'flex',\n             height: '100%',\n             flexDirection : 'column',\n             justifyContent : 'space-between'\n             }}>\n             <mwc-progress></mwc-progress>\n             <mwc-progress type=\"determinate\"></mwc-progress>\n             <mwc-progress type=\"buffer\"></mwc-progress>\n             <mwc-progress reversed={true}></mwc-progress>\n             <mwc-progress progressbarcolor=\"#ff00ff\"></mwc-progress>\n         </div>\n\n        )\n    ",
+  markdown: "## Props\n| Prop | Type | Default | Required  | Description |\n| ------ | ----------- | ------ | ------ | ------ |\n| show | Boolean | true | false |  true will show and false will hide the progress |\n| type | String | indeterminate | false | Type of Progress determinate / indeterminate / buffer  |\n| reversed | Boolean | false | false |  Reverse the Progress status |\n| progressbarcolor | String | - | false |  progressbarcolor |\n| bufferbarcolor | String | - | false |  bufferbarcolor |\n\n## Methods\n| Event | Description |\n| ------ | ------ |\n| progress  | sets the progress value |\n| buffer  | sets the buffer value |\n\n"
+};
+
+exports.default = Progress;
+},{}],228:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Radio = {
+  component: "() => (\n        [\n    <mwc-radio name=\"radios\" key=\"radio1\" radiocolor=\"#ff0000\" checked={true}></mwc-radio>,\n    <mwc-radio name=\"radios\" key=\"radio2\" radiocolor=\"#000000\"></mwc-radio>,\n    <mwc-radio name=\"radios\" key=\"radio3\" radiocolor=\"#00ff00\"></mwc-radio>,\n    <mwc-radio name=\"radios\" key=\"radio4\" radiocolor=\"#0000ff\"></mwc-radio>\n        ]\n\n        )\n    ",
+  markdown: "## Props\n| Prop | Type | Default | Required  | Description |\n| ------ | ----------- | ------ | ------ | ------ |\n| checked | Boolean | false | false | checks if it is true , uncheck when it is false|\n| ripple | Boolean | true | false | Adds ripple effect |\n| radiocolor | String | - | false |  Radio color in HEX |\n| name | String | - | false |  name of the Radio |\n\n## Methods\n| Event | Description |\n| ------ | ------ |\n| progress  | sets the progress value |\n| buffer  | sets the buffer value |\n\n"
+};
+
+exports.default = Radio;
+},{}],229:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Selectlist = {
+  component: "() => (\n        [\n    <mwc-radio name=\"radios\" key=\"radio1\" radiocolor=\"#ff0000\" checked={true}></mwc-radio>,\n    <mwc-radio name=\"radios\" key=\"radio2\" radiocolor=\"#000000\"></mwc-radio>,\n    <mwc-radio name=\"radios\" key=\"radio3\" radiocolor=\"#00ff00\"></mwc-radio>,\n    <mwc-radio name=\"radios\" key=\"radio4\" radiocolor=\"#0000ff\"></mwc-radio>\n        ]\n\n        )\n    ",
+  markdown: "## Props\n| Prop | Type | Default | Required  | Description |\n| ------ | ----------- | ------ | ------ | ------ |\n| checked | Boolean | false | false | checks if it is true , uncheck when it is false|\n| ripple | Boolean | true | false | Adds ripple effect |\n| radiocolor | String | - | false |  Radio color in HEX |\n| name | String | - | false |  name of the Radio |\n\n## Methods\n| Event | Description |\n| ------ | ------ |\n| progress  | sets the progress value |\n| buffer  | sets the buffer value |\n\n"
+};
+
+exports.default = Selectlist;
+},{}],230:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Slider = {
+  component: "() => (\n        [\n    <mwc-slider key=\"slider1\" ></mwc-slider>,\n    <mwc-slider key=\"slider2\" slidercolor=\"#ff0000\"></mwc-slider>\n    ])\n    ",
+  markdown: "## Props\n| Prop | Type | Default | Required  | Description |\n| ------ | ----------- | ------ | ------ | ------ |\n| value | Number | 50 | false |  value of the slider |\n| min | Number | 0 | false |  min value of the slider |\n| max | Number | 100 | false | max value of the slider |\n| step | Number | 0 | false | step value of the slider |\n| disabled | Boolean | false | false |  disabled the slider |\n| discrete | Boolean | false | false |  discrete slider |\n| slidercolor | String | #000000 | false |  Slider color in HEX |\n\n## Events\n| Event | Description |\n| ------ | ------ |\n| change  | dispatched when the slider changed |\n| inputchange  | dispatched when the slider inputchanged |\n\n\n## Methods\n| Event | Description |\n| ------ | ------ |\n| stepup  | stepup the value |\n| stepdown  | stepdown the value |\n\n"
+};
+
+exports.default = Slider;
+},{}],231:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Snackbar = {
+  component: "\n    class Snackbar extends React.Component {\n        constructor() {\n            super()\n            this.onButtonClick = this.onButtonClick.bind(this);\n        }\n        onButtonClick(){\n            this.mwcSnackbar.show()\n        }\n        renderSnackbar(){\n            return(\n            <mwc-snackbar ref={(mwcSnackbar) => { this.mwcSnackbar = mwcSnackbar; }}\n            message=\"snackbar message\"\n            actiontext=\"Undo\"\n            timeout = {5000}\n            actiononbutton=\"true\">\n            </mwc-snackbar>\n         )\n        }\n        render() {\n            return (\n             <div>\n                <mwc-button raised\n                    color=\"#ffffff\"\n                    backgroundcolor=\"#323232\"\n                    onClick={this.onButtonClick} >\n                    Open Snackbar\n                </mwc-button>\n                {this.renderSnackbar()}\n             </div>\n            )\n        }\n        }\n    ",
+  markdown: "## Props\n| Prop | Type | Default | Required  | Description |\n| ------ | ----------- | ------ | ------ | ------ |\n| message | String | - | false |  message on the snackbar |\n| timeout | Number | 1000 | false |  timeout for the snackbar |\n| actiontext | String | - | false | Action button text |\n| multiline | Boolean | - | false | supports multiline text|\n| actiononbutton | Boolean | false | false |  display's the actionbutton |\n| dismissesonaction | Boolean | true | false |  dissmiss the snackbar on action click |\n| backgroundcolor | String | #000000 | false |  Snackbar background color in HEX |\n| actioncolor | String | #ff0ff0 | false |  Snackbar action button color in HEX |\n| messagecolor | String | #ffffff | false |  Snackbar message color in HEX |\n\n## Events\n| Event | Description |\n| ------ | ------ |\n| actionhandler  | dispatched when the action button is clicked |\n\n## Methods\n| Event | Description |\n| ------ | ------ |\n| show  | Show's the snackbar |\n"
+};
+
+exports.default = Snackbar;
 },{}],32:[function(require,module,exports) {
 "use strict";
 
@@ -58409,8 +58537,98 @@ Object.defineProperty(exports, "Fab", {
   }
 });
 
+var _Gridlist = require("./Gridlist");
+
+Object.defineProperty(exports, "Gridlist", {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Gridlist).default;
+  }
+});
+
+var _Icontoggle = require("./Icontoggle");
+
+Object.defineProperty(exports, "Icontoggle", {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Icontoggle).default;
+  }
+});
+
+var _List = require("./List");
+
+Object.defineProperty(exports, "List", {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_List).default;
+  }
+});
+
+var _Menu = require("./Menu");
+
+Object.defineProperty(exports, "Menu", {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Menu).default;
+  }
+});
+
+var _Paper = require("./Paper");
+
+Object.defineProperty(exports, "Paper", {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Paper).default;
+  }
+});
+
+var _Progress = require("./Progress");
+
+Object.defineProperty(exports, "Progress", {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Progress).default;
+  }
+});
+
+var _Radio = require("./Radio");
+
+Object.defineProperty(exports, "Radio", {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Radio).default;
+  }
+});
+
+var _Selectlist = require("./Selectlist");
+
+Object.defineProperty(exports, "Selectlist", {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Selectlist).default;
+  }
+});
+
+var _Slider = require("./Slider");
+
+Object.defineProperty(exports, "Slider", {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Slider).default;
+  }
+});
+
+var _Snackbar = require("./Snackbar");
+
+Object.defineProperty(exports, "Snackbar", {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Snackbar).default;
+  }
+});
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Button":35,"./Card":37,"./Checkbox":36,"./Dialog":38,"./Drawer":219,"./Fab":220}],20:[function(require,module,exports) {
+},{"./Button":35,"./Card":37,"./Checkbox":36,"./Dialog":38,"./Drawer":219,"./Fab":220,"./Gridlist":222,"./Icontoggle":223,"./List":224,"./Menu":225,"./Paper":226,"./Progress":227,"./Radio":228,"./Selectlist":229,"./Slider":230,"./Snackbar":231}],20:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

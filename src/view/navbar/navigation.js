@@ -28,37 +28,44 @@ export const navigation = {
                 component:"Fab",
             },
             {
-                title:"Grid List"
+                title:"Grid List",
+                component:"Gridlist"
             },
             {
-                title:"Icon toggle"
+                title:"Icon toggle",
+                component: "Icontoggle"
             },
             {
-                title:"Layout Grid"
+                title:"List",
+                component:"List"
             },
             {
-                title:"Progress"
+                title:"Menu",
+                component:"Menu"
             },
             {
-                title:"List"
+                title:"Paper",
+                component:"Paper"
             },
             {
-                title: "Radio"
+                title:"Progress",
+                component: "Progress"
+            },
+            {
+                title: "Radio",
+                component: "Radio"
             },
              {
-                title:"Ripple"
-            },
-            {
-                title:"Paper"
-            },
-            {
-                title: "Popover"
+                title:"Select List",
+                component:"Selectlist"
             },
              {
-                title:"Slider"
+                title:"Slider",
+                component: "Slider"
             },
              {
-                title:"Snackbar"
+                title:"Snackbar",
+                component:"Snackbar"
             },
              {
                 title:"Switch"
