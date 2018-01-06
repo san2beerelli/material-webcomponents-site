@@ -26902,11 +26902,14 @@ var navigation = exports.navigation = {
       title: "Text field",
       component: "Textfield"
     }, {
-      title: "Theme"
+      title: "Theme",
+      component: 'Theme'
     }, {
-      title: "Toolbar"
+      title: "Toolbar",
+      component: 'Toolbar'
     }, {
-      title: "Typography"
+      title: "Typography",
+      component: 'Typography'
     }]
   }]
 };
@@ -38892,6 +38895,42 @@ var Textfield = {
 };
 
 exports.default = Textfield;
+},{}],237:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Toolbar = {
+  component: "\n    () => (\n       <mwc-toolbar>\n            <mwc-toolbar-section align=\"start\">\n                <mwc-toolbar-icon>\n                    menu\n                </mwc-toolbar-icon>\n                <mwc-toolbar-title>\n                <mwc-typography type=\"title\" display=\"inherit\">\n                    Title\n                </mwc-typography>\n                </mwc-toolbar-title>\n            </mwc-toolbar-section>\n            <mwc-toolbar-section align=\"end\">\n\n            </mwc-toolbar-section>\n        </mwc-toolbar>\n  )\n    ",
+  markdown: "## Props\n| Prop | Type | Default | Required  | Component | Description |\n| ------ | ----------- | ------ | ------ | ------ | ------ |\n| type | String | fixed | false | - | Toolbar supports fixed, waterfall, flexible, fixed-lastrow-only |\n| align | String | center | false | Toolbar Section | Toolbar section will aligned to start / end |\n\n## Slots\n| Slot | Prop dependencies | Component | Description |\n| ---- | ----------------- | ----------- | ----------- |\n| mwc-toolbar-title | -              | Toolbar Title| Toolbar Title |\n| mwc-toolbar-section | -              | Toolbar Section| Toolbar Section |\n| mwc-toolbar-icon | -              | Toolbar Icon| Material icons for toolbar |\n\n\n"
+};
+
+exports.default = Toolbar;
+},{}],238:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Typography = {
+  component: "\n    () => (\n         <mwc-container width=\"100%\"\n         height=\"100%\" flexdirection=\"column\"\n         justifycontent=\"center\" alignitems=\"center\" >\n            <mwc-typography type=\"display4\">\n                display4\n            </mwc-typography>\n            <mwc-typography type=\"display3\" color=\"#b7884c\">\n                display3\n            </mwc-typography>\n            <mwc-typography type=\"display2\">\n                display2\n            </mwc-typography>\n            <mwc-typography type=\"display1\">\n                display1\n            </mwc-typography>\n            <mwc-typography type=\"headline\">\n                headline\n            </mwc-typography>\n            <mwc-typography type=\"title\" color=\"#ff00ff\">\n                title\n            </mwc-typography>\n         </mwc-container>\n  )\n    ",
+  markdown: "## Props\n| Prop | Type | Default | Required | Description |\n| ------ | ----------- | ------ | ------ | ------ |\n| type | String | display1 | false | Typography supports display4, display3, display2, display1, headline, title, subheading2, subheading1, body2, body1, caption, button |\n| color | String | - | false | Typography color in HEX |\n| display | String | block | false | display types are block / inherit |\n\n"
+};
+
+exports.default = Typography;
+},{}],239:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Theme = {
+  component: "class Theme extends React.Component {\n        render() {\n        const theme = {\n                \"primary\" : \"#ff9000\",\n                \"primary-light\": '#fff000',\n                \"primary-dark\": '#ffff00',\n                \"secondary\": '#0000ff',\n                \"secondary-light\": '#000fff',\n                \"secondary-dark\": '#00ffff',\n                \"background\": '#BDBDBD'\n            }\n          const themeRef = (themeref) => {\n            if(themeref){\n                themeref.theme = theme;\n            }\n        };\n        return (\n            <mwc-theme ref={themeRef}>\n            <mwc-button raised>\n                Primary\n            </mwc-button>\n            <mwc-button stroked>\n                Primary\n            </mwc-button>\n            </mwc-theme>\n        )\n         }\n\n    }\n    ",
+  markdown: "## Props\n| Prop | Type | Default | Required   | Description |\n| ------ | ----------- | ------ | ------ | ------ |\n| theme | Object | - | false | Accepts theme object |\n| fonts | Array | Roboto | false | Array of font cdn urls |\n| icons | Arrya | Material Icons | false | Arra of icon cdn urls|\n\n"
+};
+
+exports.default = Theme;
 },{}],32:[function(require,module,exports) {
 "use strict";
 
@@ -39070,8 +39109,35 @@ Object.defineProperty(exports, "Textfield", {
   }
 });
 
+var _Toolbar = require("./Toolbar");
+
+Object.defineProperty(exports, "Toolbar", {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Toolbar).default;
+  }
+});
+
+var _Typography = require("./Typography");
+
+Object.defineProperty(exports, "Typography", {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Typography).default;
+  }
+});
+
+var _Theme = require("./Theme");
+
+Object.defineProperty(exports, "Theme", {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_Theme).default;
+  }
+});
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Button":35,"./Card":36,"./Checkbox":37,"./Dialog":38,"./Drawer":39,"./Fab":40,"./Gridlist":42,"./Icontoggle":41,"./List":43,"./Menu":44,"./Paper":45,"./Progress":46,"./Radio":47,"./Selectlist":48,"./Slider":49,"./Snackbar":50,"./Switch":234,"./Tabbar":235,"./Textfield":236}],94:[function(require,module,exports) {
+},{"./Button":35,"./Card":36,"./Checkbox":37,"./Dialog":38,"./Drawer":39,"./Fab":40,"./Gridlist":42,"./Icontoggle":41,"./List":43,"./Menu":44,"./Paper":45,"./Progress":46,"./Radio":47,"./Selectlist":48,"./Slider":49,"./Snackbar":50,"./Switch":234,"./Tabbar":235,"./Textfield":236,"./Toolbar":237,"./Typography":238,"./Theme":239}],94:[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

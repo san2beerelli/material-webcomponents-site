@@ -80,13 +80,16 @@ export const navigation = {
                 component: "Textfield"
             },
             {
-                title: "Theme"
+                title: "Theme",
+                component: 'Theme'
             },
              {
-                title:"Toolbar"
+                title:"Toolbar",
+                component: 'Toolbar'
             },
             {
-                title:"Typography"
+                title:"Typography",
+                component: 'Typography'
             }
         ]
     }
