@@ -68,13 +68,16 @@ export const navigation = {
                 component:"Snackbar"
             },
              {
-                title:"Switch"
+                title:"Switch",
+                component:"Switch"
             },
              {
-                title:"Tabs"
+                title:"Tab Bar",
+                component:"Tabbar"
             },
             {
-                title:"Text field"
+                title:"Text field",
+                component: "Textfield"
             },
             {
                 title: "Theme"
